@@ -1,0 +1,67 @@
+[
+  {
+    "id": "p1_c0",
+    "pagina": 1,
+    "texto": "Clínica Vitalis\n Manual de Políticas y Procedimientos para Pacientes\n Versión 2.1 — Vigente desde julio de 2026"
+  },
+  {
+    "id": "p2_c0",
+    "pagina": 2,
+    "texto": "1. Política de Privacidad de Datos del Paciente\n1.1 Recolección de información\nClínica Vitalis recolecta datos personales y de salud de sus pacientes únicamente con fines\nasistenciales, administrativos y de facturación. Los datos recolectados incluyen: nombre completo,\ndocumento de identidad, fecha de nacimiento, datos de contacto, historia clínica, resultados de\nexámenes, y datos de convenio o cobertura médica.\n1.2 Almacenamiento y seguridad\nToda la información se almacena en el sistema de historia clínica electrónica (HCE) de la clínica,\nprotegido mediante cifrado en reposo y en tránsito. El acceso está restringido al personal médico y\nadministrativo autorizado, cada uno con credenciales individuales. Se realiza una auditoría de\naccesos cada 90 días.\n1.3 Retención y eliminación de datos"
+  },
+  {
+    "id": "p2_c1",
+    "pagina": 2,
+    "texto": "accesos cada 90 días.\n1.3 Retención y eliminación de datos\nLa historia clínica se conserva por un mínimo de 15 años desde la última atención, conforme a la\nnormativa sanitaria vigente. Pasado ese plazo, el paciente puede solicitar la eliminación de sus\ndatos administrativos, aunque la información clínica podrá anonimizarse en lugar de eliminarse por\nmotivos de trazabilidad médica.\n1.4 Derechos del paciente\nTodo paciente tiene derecho a acceder, rectificar y solicitar una copia de su historia clínica en un\nplazo máximo de 10 días hábiles desde la solicitud escrita. Las solicitudes se realizan a través del\ncorreo privacidad@clinicavitalis.com o en la recepción de la clínica.\n1.5 Terceros y convenios\nLos datos solo se comparten con obras sociales, prepagas o aseguradoras cuando sea"
+  },
+  {
+    "id": "p2_c2",
+    "pagina": 2,
+    "texto": "1.5 Terceros y convenios\nLos datos solo se comparten con obras sociales, prepagas o aseguradoras cuando sea\nestrictamente necesario para autorizar prácticas o gestionar la facturación, y siempre bajo\nacuerdos de confidencialidad firmados con dichas entidades."
+  },
+  {
+    "id": "p3_c0",
+    "pagina": 3,
+    "texto": "2. Preguntas Frecuentes sobre Consultas y Turnos\n¿Cómo puedo pedir un turno?\nLos turnos pueden solicitarse por el sitio web de la clínica, por teléfono al (555) 234-5678, o\npresencialmente en recepción. La confirmación se envía por SMS o correo electrónico dentro de\nlas 2 horas siguientes a la solicitud.\n¿Con cuánta anticipación debo llegar a mi consulta?\nSe recomienda llegar 15 minutos antes de la hora del turno para completar el registro\nadministrativo. Para primeras consultas o estudios con preparación previa, se recomienda llegar\n30 minutos antes.\n¿Qué pasa si llego tarde a mi turno?\nExiste una tolerancia de 10 minutos. Pasado ese tiempo, el turno podrá reprogramarse según la\ndisponibilidad de la agenda del profesional, sin garantía de atención el mismo día."
+  },
+  {
+    "id": "p3_c1",
+    "pagina": 3,
+    "texto": "disponibilidad de la agenda del profesional, sin garantía de atención el mismo día.\n¿Puedo pedir un turno de urgencia?\nSí. Los turnos de urgencia se gestionan telefónicamente y tienen prioridad en la agenda diaria. En\ncaso de emergencia médica grave, se recomienda dirigirse directamente a la guardia.\n¿Los turnos por telemedicina están disponibles?\nSí, para especialidades de seguimiento (clínica médica, nutrición, salud mental) se ofrece la\nmodalidad de videoconsulta a través de la plataforma de la clínica.\n¿Cómo sé qué documentos llevar a la consulta?\nSe debe presentar documento de identidad, credencial de la obra social o prepaga (si\ncorresponde), y los estudios o informes médicos previos relacionados con el motivo de consulta."
+  },
+  {
+    "id": "p4_c0",
+    "pagina": 4,
+    "texto": "3. Política de Cancelaciones y Reagendamiento\n3.1 Plazos para cancelar\nLas cancelaciones deben realizarse con al menos 24 horas de anticipación a través del sitio web,\nla app de la clínica o por teléfono. Las cancelaciones con menos de 24 horas de anticipación se\nconsideran 'tardías'.\n3.2 Inasistencias y cargos\nLa primera inasistencia sin aviso ('no-show') en un período de 12 meses no genera cargo, pero\nqueda registrada en el historial del paciente. A partir de la segunda inasistencia sin aviso, se\naplicará un cargo administrativo equivalente al 50% del valor de la consulta particular, salvo\njustificación médica documentada.\n3.3 Reagendamiento\nUn turno puede reagendarse hasta dos veces sin costo adicional, siempre que se avise con al"
+  },
+  {
+    "id": "p4_c1",
+    "pagina": 4,
+    "texto": "3.3 Reagendamiento\nUn turno puede reagendarse hasta dos veces sin costo adicional, siempre que se avise con al\nmenos 4 horas de anticipación. A partir del tercer reagendamiento del mismo turno original, se\nsolicitará confirmar la asistencia mediante un pago a cuenta reembolsable.\n3.4 Cancelaciones por parte de la clínica\nSi la clínica debe cancelar un turno (ausencia del profesional, emergencia, desperfecto técnico),\nse notificará al paciente lo antes posible y se ofrecerá el primer turno disponible o la modalidad de\ntelemedicina como alternativa, sin costo adicional."
+  },
+  {
+    "id": "p5_c0",
+    "pagina": 5,
+    "texto": "4. Guía de Convenios y Coberturas Médicas\nClínica Vitalis trabaja con las siguientes obras sociales y prepagas. El porcentaje de cobertura\nindicado aplica a consultas de especialidades clínicas; los estudios de diagnóstico por imágenes y\nprácticas de alta complejidad pueden tener coberturas distintas, sujetas a autorización previa.\nConvenio\nCobertura consulta\nRequiere autorización previa\nCopago aproximado\nSaludPlus\n100%\nNo\n$0\nMedFuturo\n80%\nSolo alta complejidad\n$1.500\nObra Social Central (OSC)\n70%\nSí, estudios e internación\n$2.200\nPrevenSalud\n100%\nNo\n$0\nBienestar Integral\n60%\nSí, todas las prácticas\n$2.800\nParticular (sin convenio)\n0%\nNo aplica\nValor completo de consulta\nPara las prácticas que requieren autorización previa, el paciente debe solicitar la orden médica al"
+  },
+  {
+    "id": "p5_c1",
+    "pagina": 5,
+    "texto": "Para las prácticas que requieren autorización previa, el paciente debe solicitar la orden médica al\nprofesional tratante y presentarla en el área de convenios con al menos 3 días hábiles de\nanticipación al turno, para gestionar la autorización con la entidad correspondiente."
+  },
+  {
+    "id": "p6_c0",
+    "pagina": 6,
+    "texto": "5. Instrucciones Pre y Post Consulta\n5.1 Antes de la consulta general\nNo es necesaria una preparación especial para consultas clínicas de rutina. Se recomienda llevar\nun listado actualizado de medicamentos que esté tomando el paciente y los estudios previos\nrelacionados con el motivo de consulta.\n5.2 Antes de extracciones de sangre\nSe requiere ayuno de 8 horas para perfiles metabólicos y lipídicos, y de 12 horas si se solicita\nglucemia en ayunas. Se puede tomar agua durante el período de ayuno. No se debe suspender\nninguna medicación sin indicación médica.\n5.3 Antes de estudios por imágenes con contraste\nPara tomografías o resonancias con contraste se requiere ayuno de 4 horas y presentar los\nvalores de creatinina sérica de los últimos 30 días. Pacientes con antecedentes de alergia al yodo"
+  },
+  {
+    "id": "p6_c1",
+    "pagina": 6,
+    "texto": "valores de creatinina sérica de los últimos 30 días. Pacientes con antecedentes de alergia al yodo\no al contraste deben informarlo al momento de agendar el turno.\n5.4 Después de procedimientos ambulatorios menores\nTras procedimientos menores (biopsias, infiltraciones, pequeñas curaciones quirúrgicas) el\npaciente debe permanecer en observación en la clínica durante 30 minutos. Se recomienda no\nrealizar esfuerzo físico durante las 24 horas posteriores y mantener el área tratada limpia y seca.\n5.5 Después de estudios con sedación\nEl paciente no debe conducir ni operar maquinaria durante las 12 horas posteriores a un estudio\nrealizado con sedación. Debe retirarse acompañado de otra persona adulta responsable.\n5.6 Signos de alarma para consultar de urgencia"
+  },
+  {
+    "id": "p6_c2",
+    "pagina": 6,
+    "texto": "5.6 Signos de alarma para consultar de urgencia\nAnte fiebre mayor a 38.5°C, sangrado que no cede, dolor intenso en aumento, dificultad\nrespiratoria o reacción alérgica luego de un procedimiento o estudio, el paciente debe dirigirse de\ninmediato a la guardia de la clínica o al servicio de emergencias más cercano."
+  }
+]
