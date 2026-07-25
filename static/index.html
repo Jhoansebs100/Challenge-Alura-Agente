@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clínica Vitalis — Agente de Consultas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal-deep:   #0F4C4A;
+    --teal-mid:    #1B6B66;
+    --mint-bg:     #EFF6F3;
+    --paper:       #FBFBF8;
+    --ink:         #16302E;
+    --ink-soft:    #587570;
+    --amber:       #D98E2B;
+    --line:        #D7E5E1;
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--mint-bg);
+    color:var(--ink);
+    font-family:'Inter', system-ui, sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+  }
+
+  /* ---------- Header ---------- */
+  header{
+    background:var(--teal-deep);
+    color:var(--paper);
+    padding:22px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:16px;
+  }
+  .marca{ display:flex; align-items:center; gap:14px; }
+  .marca h1{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:1.5rem;
+    margin:0;
+    letter-spacing:0.2px;
+  }
+  .marca p{ margin:2px 0 0; font-size:0.8rem; color:#B9D6D1; }
+
+  /* Signature element: línea de "signos vitales" animada */
+  .vitales{ width:120px; height:32px; flex-shrink:0; }
+  .vitales path{
+    fill:none;
+    stroke:var(--amber);
+    stroke-width:2;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-dasharray:220;
+    stroke-dashoffset:220;
+    animation:trazar 3.2s ease-in-out infinite;
+  }
+  @keyframes trazar{
+    0%{stroke-dashoffset:220;}
+    45%{stroke-dashoffset:0;}
+    100%{stroke-dashoffset:-220;}
+  }
+  .estado{
+    display:flex; align-items:center; gap:6px;
+    font-size:0.78rem; color:#B9D6D1;
+  }
+  .punto{
+    width:8px; height:8px; border-radius:50%;
+    background:#5CD6A0;
+    box-shadow:0 0 0 0 rgba(92,214,160,.6);
+    animation:pulso 2s infinite;
+  }
+  @keyframes pulso{
+    0%{ box-shadow:0 0 0 0 rgba(92,214,160,.55); }
+    70%{ box-shadow:0 0 0 6px rgba(92,214,160,0); }
+    100%{ box-shadow:0 0 0 0 rgba(92,214,160,0); }
+  }
+
+  /* ---------- Layout principal ---------- */
+  main{
+    flex:1;
+    max-width:760px;
+    width:100%;
+    margin:0 auto;
+    padding:24px 20px 32px;
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+  }
+
+  .sugerencias{
+    display:flex; flex-wrap:wrap; gap:8px;
+  }
+  .chip{
+    background:var(--paper);
+    border:1px solid var(--line);
+    color:var(--teal-deep);
+    font-size:0.82rem;
+    padding:7px 13px;
+    border-radius:999px;
+    cursor:pointer;
+    transition:background .15s, border-color .15s;
+  }
+  .chip:hover{ background:#E4F0EC; border-color:var(--teal-mid); }
+
+  .chat{
+    background:var(--paper);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    flex:1;
+    min-height:360px;
+    padding:20px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    overflow-y:auto;
+  }
+
+  .msg{ max-width:82%; line-height:1.5; font-size:0.95rem; }
+  .msg.usuario{
+    align-self:flex-end;
+    background:var(--teal-deep);
+    color:var(--paper);
+    padding:11px 15px;
+    border-radius:14px 14px 3px 14px;
+  }
+  .msg.agente{
+    align-self:flex-start;
+    background:var(--mint-bg);
+    color:var(--ink);
+    padding:11px 15px;
+    border-radius:14px 14px 14px 3px;
+    white-space:pre-wrap;
+  }
+  .msg.agente .fuentes{
+    display:block; margin-top:8px;
+    font-size:0.76rem; color:var(--ink-soft);
+    border-top:1px solid var(--line); padding-top:6px;
+  }
+  .msg.sistema{
+    align-self:center;
+    color:var(--ink-soft);
+    font-size:0.82rem;
+  }
+
+  form{ display:flex; gap:10px; }
+  input[type=text]{
+    flex:1;
+    padding:13px 16px;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    font-size:0.95rem;
+    font-family:inherit;
+    background:var(--paper);
+    color:var(--ink);
+  }
+  input[type=text]:focus{ outline:2px solid var(--teal-mid); outline-offset:1px; }
+  button{
+    background:var(--teal-deep);
+    color:var(--paper);
+    border:none;
+    padding:0 22px;
+    border-radius:var(--radius);
+    font-family:inherit;
+    font-weight:600;
+    font-size:0.9rem;
+    cursor:pointer;
+    transition:background .15s;
+  }
+  button:hover{ background:var(--teal-mid); }
+  button:disabled{ opacity:.6; cursor:default; }
+
+  footer{
+    text-align:center;
+    font-size:0.75rem;
+    color:var(--ink-soft);
+    padding:14px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .vitales path, .punto{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="marca">
+    <svg class="vitales" viewBox="0 0 120 32" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 16 H30 L38 4 L46 28 L54 16 H120" />
+    </svg>
+    <div>
+      <h1>Clínica Vitalis</h1>
+      <p>Agente de consultas para pacientes</p>
+    </div>
+  </div>
+  <div class="estado"><span class="punto"></span><span id="estado-texto">Conectando…</span></div>
+</header>
+
+<main>
+  <div class="sugerencias" id="sugerencias">
+    <div class="chip" data-q="¿Qué cobertura tiene MedFuturo?">¿Qué cobertura tiene MedFuturo?</div>
+    <div class="chip" data-q="¿Cuánto tiempo debo esperar tras un estudio con sedación?">Cuidados tras sedación</div>
+    <div class="chip" data-q="¿Qué pasa si falto a un turno sin avisar?">Inasistencia a un turno</div>
+    <div class="chip" data-q="¿Con cuánto tiempo puedo cancelar un turno?">Cancelar un turno</div>
+  </div>
+
+  <div class="chat" id="chat">
+    <div class="msg sistema">Preguntá lo que necesites sobre turnos, convenios, cancelaciones o preparación para estudios.</div>
+  </div>
+
+  <form id="form-pregunta">
+    <input type="text" id="input-pregunta" placeholder="Escribí tu pregunta…" autocomplete="off" required>
+    <button type="submit" id="btn-enviar">Enviar</button>
+  </form>
+</main>
+
+<footer>Las respuestas se generan a partir del Manual de Políticas de Clínica Vitalis. Ante una urgencia, comunicate directamente con la clínica.</footer>
+
+<script>
+const chat = document.getElementById('chat');
+const form = document.getElementById('form-pregunta');
+const input = document.getElementById('input-pregunta');
+const btn = document.getElementById('btn-enviar');
+const estadoTexto = document.getElementById('estado-texto');
+
+function agregarMensaje(texto, tipo, fuentes){
+  const div = document.createElement('div');
+  div.className = 'msg ' + tipo;
+  div.textContent = texto;
+  if(fuentes && fuentes.length){
+    const f = document.createElement('span');
+    f.className = 'fuentes';
+    f.textContent = 'Fuente: página(s) ' + fuentes.map(x => x.pagina).join(', ');
+    div.appendChild(f);
+  }
+  chat.appendChild(div);
+  chat.scrollTop = chat.scrollHeight;
+}
+
+async function verificarSalud(){
+  try{
+    const r = await fetch('/salud');
+    const d = await r.json();
+    estadoTexto.textContent = 'En línea · backend: ' + d.backend;
+  }catch(e){
+    estadoTexto.textContent = 'Sin conexión con el servidor';
+  }
+}
+verificarSalud();
+
+async function enviarPregunta(pregunta){
+  agregarMensaje(pregunta, 'usuario');
+  btn.disabled = true;
+  const idCargando = 'cargando-' + Date.now();
+  agregarMensaje('Buscando en el manual…', 'agente sistema-carga');
+  const nodoCargando = chat.lastChild;
+
+  try{
+    const r = await fetch('/api/preguntar', {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body: JSON.stringify({pregunta})
+    });
+    if(!r.ok) throw new Error('Error de servidor');
+    const data = await r.json();
+    nodoCargando.remove();
+    agregarMensaje(data.respuesta, 'agente', data.fuentes);
+  }catch(err){
+    nodoCargando.remove();
+    agregarMensaje('No pude conectar con el agente. Intentá nuevamente en unos segundos.', 'agente');
+  }finally{
+    btn.disabled = false;
+  }
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const texto = input.value.trim();
+  if(!texto) return;
+  input.value = '';
+  enviarPregunta(texto);
+});
+
+document.getElementById('sugerencias').addEventListener('click', (e) => {
+  const chip = e.target.closest('.chip');
+  if(!chip) return;
+  enviarPregunta(chip.dataset.q);
+});
+</script>
+</body>
+</html>
